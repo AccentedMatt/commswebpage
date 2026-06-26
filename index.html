@@ -1,284 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BallyComms - Home</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      height: 100%;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-
-      background: url('https://cdn.pixabay.com/photo/2015/09/23/09/55/belfast-953301_1280.jpg')
-        center center / cover no-repeat fixed;
-
-      color: white;
-      position: relative;
-    }
-
-    body::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 0;
-    }
-
-    header,
-    footer,
-    main {
-      position: relative;
-      z-index: 1;
-    }
-
-    header {
-      padding: 22px 40px;
-      background: rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(6px);
-    }
-
-    .logo {
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: white;
-      text-decoration: none;
-      transition: opacity 0.2s ease;
-      display: inline-block;
-    }
-
-    .logo:hover {
-      opacity: 0.8;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-    }
-
-    .content-box {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 55px;
-      border-radius: 18px;
-      max-width: 980px;
-      width: 100%;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-    }
-
-    .hero-text {
-      text-align: center;
-    }
-
-    .hero-text h1 {
-      font-size: 3.2rem;
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .about-section,
-    .contact-section {
-      margin-top: 45px;
-      padding-top: 35px;
-      border-top: 1px solid rgba(255, 255, 255, 0.18);
-    }
-
-    .about-section h2,
-    .contact-section h2 {
-      font-size: 1.7rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .about-section p {
-      font-size: 1.08rem;
-      line-height: 1.9;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 18px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
-
-    .contact-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 24px;
-      border-radius: 14px;
-      transition: 0.3s ease;
-    }
-
-    .contact-card:hover {
-      background: rgba(255, 255, 255, 0.12);
-      transform: translateY(-3px);
-    }
-
-    .contact-card strong {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-
-    .contact-card p {
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.88);
-    }
-
-    .contact-card a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-card a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      padding: 18px 40px;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(6px);
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.85);
-    }
-
-    @media (max-width: 768px) {
-      .content-box {
-        padding: 35px 25px;
-      }
-
-      .hero-text h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-text p,
-      .about-section p {
-        font-size: 1rem;
-      }
-
-      header,
-      footer {
-        padding: 18px 20px;
-      }
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071a2d" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="BallyComms provides fixed wireless internet, business WiFi design, on-prem CCTV and managed firewall maintenance across Ballynahinch, rural County Down and surrounding areas." />
+  <title>BallyComms | Fixed Wireless Internet, Business WiFi & CCTV in County Down</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "BallyComms",
+    "url": "https://www.ballycomms.com/",
+    "email": "enquiries@ballycomms.com",
+    "areaServed": [
+      "Ballynahinch",
+      "County Down",
+      "Northern Ireland"
+    ],
+    "description": "Fixed wireless internet, business WiFi design, on-prem CCTV and managed firewall maintenance for farms, cafés, shops and local businesses.",
+    "knowsAbout": [
+      "Fixed wireless internet",
+      "Business WiFi design",
+      "MikroTik",
+      "Ubiquiti",
+      "Firewall maintenance",
+      "Guest WiFi",
+      "On-prem CCTV",
+      "Local NVR recording"
+    ]
+  }
+  </script>
 </head>
 <body>
-
-  <header>
-    <a href="#" class="logo">
-      BallyComms
-    </a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="BallyComms home">
+        <img src="assets/logo.svg" alt="BallyComms" />
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation" data-nav>
+          <a class="active" href="index.html">Home</a>
+          <a class="" href="wireless-isp.html">Wireless ISP</a>
+          <a class="" href="business-wifi.html">Business WiFi</a>
+          <a class="" href="cctv.html">CCTV</a>
+          <a class="" href="sectors.html">Who we help</a>
+          <a class="" href="about.html">About</a>
+          <a class="" href="contact.html">Contact</a>
+          <a class="nav-cta" href="contact.html">Request survey</a>
+      </nav>
+    </div>
   </header>
-
-  <main>
-    <div class="content-box">
-
-      <!-- Hero -->
-      <div class="hero-text">
-        <h1>Website Coming Soon</h1>
-        <p>
-          We’re working on our new website at the moment.<br />
-          More information will be available soon.
-        </p>
-      </div>
-
-      <!-- About -->
-      <div class="about-section">
-        <h2>IT Support & Business WiFi</h2>
-
-        <p>
-          BallyComms provides managed IT support and business
-          WiFi services for small businesses.
-        </p>
-
-        <p>
-          We look after the day-to-day technical side of things - whether
-          that’s keeping your WiFi running properly, helping with devices,
-          fixing problems when they come up, or making sure your business
-          stays connected.
-        </p>
-
-        <p>
-          Instead of dealing with multiple providers or trying to manage
-          everything yourself, we provide straightforward support that
-          businesses can rely on when they need it.
-        </p>
-      </div>
-
-      <!-- Contact -->
-      <div class="contact-section">
-        <h2>Get In Touch</h2>
-
-        <div class="contact-grid">
-
-          <div class="contact-card">
-            <strong>New Business Enquiries</strong>
-
-            <p>
-              If you’re interested in our services or want to discuss
-              support for your business, get in touch with us below.
-            </p>
-
-            <p style="margin-top: 12px;">
-              <a href="mailto:enquiries@ballycomms.com">
-                enquiries@ballycomms.com
-              </a>
-            </p>
+  <main id="main">
+    <section class="hero hero-home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Fixed wireless internet, business WiFi and CCTV</p>
+          <h1>Keeping farms, cafés, shops and local businesses connected.</h1>
+          <p class="lead">BallyComms provides fixed wireless internet, business WiFi design, on-prem CCTV and managed firewall maintenance for premises across Ballynahinch, rural County Down and surrounding areas.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="contact.html">Request a site survey</a>
+            <a class="button secondary" href="contact.html">Check availability</a>
           </div>
-
-          <div class="contact-card">
-            <strong>Customer Support</strong>
-
-            <p>
-              Existing customer needing help or having an issue?
-              Contact support and we’ll get back to you as soon as possible.
-            </p>
-
-            <p style="margin-top: 12px;">
-              <a href="mailto:support@ballycomms.com">
-                support@ballycomms.com
-              </a>
-            </p>
+          <div class="hero-contact" aria-label="Contact BallyComms">
+            <span>New enquiries</span>
+            <a href="mailto:enquiries@ballycomms.com">enquiries@ballycomms.com</a>
           </div>
-
+          <div class="local-proof" aria-label="Company origin and service area">
+            <strong>Started in Ballynahinch</strong>
+            <span>Serving Ballynahinch, rural County Down and surrounding areas with practical connectivity and CCTV for real working premises.</span>
+          </div>
+        </div>
+        <div class="signal-scene reveal delay-1" aria-label="Wireless connection illustration">
+          <div class="map-card">
+            <span class="map-label label-town">Ballynahinch</span>
+            <span class="map-label label-farm">Farm</span>
+            <span class="map-label label-cafe">Café / Shop</span>
+            <span class="map-label label-office">Workshop / CCTV</span>
+            <div class="mast-tower"><span></span></div>
+            <div class="signal-ring ring-one"></div>
+            <div class="signal-ring ring-two"></div>
+            <div class="signal-ring ring-three"></div>
+            <div class="link-line line-one"></div>
+            <div class="link-line line-two"></div>
+            <div class="link-line line-three"></div>
+          </div>
         </div>
       </div>
+    </section>
 
-    </div>
+    <section class="service-strip">
+      <div class="container strip-grid">
+        <a href="wireless-isp.html"><span>01</span><strong>Fixed Wireless Internet</strong><em>For premises where fibre is unavailable, unreliable or too slow for daily business.</em></a>
+        <a href="business-wifi.html"><span>02</span><strong>Business WiFi Design</strong><em>WiFi planned around your building, users and devices, not just a router in the corner.</em></a>
+        <a href="cctv.html"><span>03</span><strong>On-Prem CCTV</strong><em>Local camera recording and useful coverage for yards, shops, cafés and workshops.</em></a>
+        <a href="business-wifi.html#firewall"><span>04</span><strong>Managed Firewall Maintenance</strong><em>Planned router and firewall maintenance to reduce avoidable downtime and security issues.</em></a>
+      </div>
+    </section>
+
+    <section class="section-pad intro-section">
+      <div class="container two-col">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Local, practical connectivity</p>
+          <h2>Built around places that cannot afford patchy internet.</h2>
+        </div>
+        <div class="rich-copy reveal delay-1">
+          <p>BallyComms started in Ballynahinch with a simple focus: help local premises get reliable internet access, proper WiFi coverage, on-prem CCTV and sensible network edge maintenance.</p>
+          <p>Whether you run a farm with cameras and card payments, or a café shop with tills, guest WiFi and CCTV, the goal is the same. Keep the business online without making the setup more complicated than it needs to be.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad dark-panel-section">
+      <div class="container dark-panel reveal">
+        <div>
+          <p class="eyebrow light">Wireless ISP + WiFi + CCTV</p>
+          <h2>Internet access, business WiFi, CCTV and the firewall behind it.</h2>
+          <p>BallyComms is deliberately focused. It is not a general helpdesk for printers, laptops or day-to-day desktop support. It is for businesses that need a stable internet route, properly planned WiFi, on-prem CCTV and managed firewall maintenance.</p>
+        </div>
+        <div class="ticks">
+          <span>Fixed wireless links for suitable premises</span>
+          <span>Business WiFi surveys and design</span>
+          <span>Guest and staff WiFi separation</span>
+          <span>On-prem CCTV with local recording</span>
+          <span>Planned router and firewall maintenance windows</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad trust-section">
+      <div class="container">
+        <div class="section-heading centred reveal">
+          <p class="eyebrow">Why choose BallyComms</p>
+          <h2>Clear advice before kit goes on the wall.</h2>
+        </div>
+        <div class="cards four trust-cards reveal delay-1">
+          <article><span class="card-icon">📍</span><h3>Site-survey led</h3><p>Recommendations are based on the premises, available line of sight, building layout and what actually needs to stay online.</p></article>
+          <article><span class="card-icon">📡</span><h3>Professional-grade equipment</h3><p>Networks are designed around proven MikroTik and Ubiquiti equipment, configured for reliable business use.</p></article>
+          <article><span class="card-icon">🎥</span><h3>On-prem CCTV</h3><p>Camera layouts, local recording and remote access can be planned as part of the same network, not bolted on later.</p></article>
+          <article><span class="card-icon">🔐</span><h3>Managed firewall maintenance</h3><p>Router and firewall maintenance can be scheduled in sensible windows, helping reduce avoidable downtime and security issues.</p></article>
+        </div>
+        <div class="proof-list reveal delay-1" aria-label="BallyComms trust signals">
+          <span>Local business</span>
+          <span>Rural connectivity experience</span>
+          <span>Guest and staff WiFi networks</span>
+          <span>On-prem CCTV and local recording</span>
+          <span>Practical recommendations</span>
+          <span>Started in Ballynahinch</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad light-section">
+      <div class="container split-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>A straightforward route from enquiry to installed network.</h2>
+        </div>
+        <div class="process-list reveal delay-1">
+          <article><span class="step">01</span><div><h3>Tell us what needs to stay online</h3><p>Card machines, cameras, tills, guest WiFi, office systems, farmyards, sheds or workshops.</p></div></article>
+          <article><span class="step">02</span><div><h3>We check the site and available options</h3><p>The premises, coverage needs and fixed wireless suitability are reviewed before a recommendation is made.</p></div></article>
+          <article><span class="step">03</span><div><h3>You get a practical setup plan</h3><p>The recommendation covers internet access, WiFi coverage, CCTV, guest separation and firewall maintenance where needed.</p></div></article>
+          <article><span class="step">04</span><div><h3>Install, configure and maintain</h3><p>The network is installed neatly, configured properly and kept maintained through planned update windows.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad sectors-preview">
+      <div class="container">
+        <div class="section-heading centred reveal">
+          <p class="eyebrow">Who we help</p>
+          <h2>Real examples of local connectivity problems.</h2>
+        </div>
+        <div class="cards three reveal delay-1">
+          <article><span class="card-icon">🌾</span><h3>Farm yard coverage</h3><p>A farm needing yard WiFi, CCTV, office internet and reliable access for card payments or booking systems.</p></article>
+          <article><span class="card-icon">☕</span><h3>Café and shop WiFi</h3><p>A café or shop needing stable WiFi for tills, card machines, staff devices and a separate guest network.</p></article>
+          <article><span class="card-icon">🔧</span><h3>Workshop connectivity</h3><p>A workshop or yard needing WiFi and CCTV across units, service areas, stock systems, phones and day-to-day business devices.</p></article>
+        </div>
+        <div class="center-actions"><a class="button secondary" href="sectors.html">See business types</a></div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-grid">
+        <div>
+          <p class="eyebrow">Ready to check your premises?</p>
+          <h2>Request a site survey or availability check.</h2>
+          <p class="cta-note">Tell us where you are, what needs to stay online and whether you need internet access, WiFi design, CCTV or firewall maintenance.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="button primary inverse" href="contact.html">Request a site survey</a>
+          <a class="button secondary" href="mailto:enquiries@ballycomms.com">Email enquiries</a>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <footer>
-    &copy; 2026 BallyComms. All rights reserved.
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="BallyComms" /></a>
+        <p>Started in Ballynahinch. Built to keep farms, cafés, shops and local businesses connected.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Services</h2>
+        <a href="wireless-isp.html">Wireless ISP</a>
+        <a href="business-wifi.html">Business WiFi design</a>
+        <a href="cctv.html">On-prem CCTV</a>
+        <a href="business-wifi.html#firewall">Managed firewall maintenance</a>
+      </div>
+      <div class="footer-col">
+        <h2>Contact</h2>
+        <a href="mailto:enquiries@ballycomms.com">enquiries@ballycomms.com</a>
+        <a href="mailto:support@ballycomms.com">support@ballycomms.com</a>
+        <a href="contact.html">Request a site survey</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year></span> BallyComms. All rights reserved.</span>
+      <span>Wireless ISP • Business WiFi design • On-prem CCTV • Managed firewall maintenance</span>
+    </div>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>

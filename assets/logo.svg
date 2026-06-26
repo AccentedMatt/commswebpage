@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="180" viewBox="0 0 760 180" role="img" aria-labelledby="title desc">
+  <title id="title">BallyComms logo</title>
+  <desc id="desc">BallyComms wordmark with the circular B logo mark.</desc>
+  <defs>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#5B97FD" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <g filter="url(#softGlow)" transform="translate(16 16) scale(.296)">
+    <circle cx="250" cy="250" r="250" fill="#092154"/>
+    <path fill="#FFFFFF" fill-rule="evenodd" d="
+      M 121 61
+      H 305
+      C 364 61 405 101 405 162
+      C 405 190 396 214 380 230
+      C 407 249 425 283 425 318
+      C 425 381 379 427 316 427
+      H 273
+      V 381
+      H 315
+      C 351 381 377 357 377 326
+      C 377 290 352 262 318 262
+      H 121
+      Z
+      M 171 110
+      H 310
+      C 338 110 357 132 357 162
+      C 357 193 338 215 310 215
+      H 171
+      Z"/>
+    <rect x="121" y="293" width="132" height="30" fill="#5B97FD"/>
+    <rect x="121" y="345" width="113" height="31" fill="#5B97FD"/>
+    <rect x="121" y="398" width="93" height="31" fill="#5B97FD"/>
+  </g>
+  <text x="190" y="78" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="650" letter-spacing="-.4">BallyComms</text>
+  <text x="194" y="124" fill="#9DBDFF" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="650" letter-spacing="1.4">WIRELESS ISP • BUSINESS WIFI</text>
+</svg>
